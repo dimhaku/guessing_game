@@ -1,31 +1,47 @@
 <script>
 
+
 var question1, question2, question3, answer1, answer2, answer3, answer4, message;
 
 // Trivia
-var question1=prompt('Which capital city has the highest elevation in the world?')
-var answer1='La Paz';
+var trivia = function() {
+var quiz1 = function() {
+  question1=prompt('Which capital city has the highest elevation in the world?');
+    answer1='La Paz';
 if (question1 == answer1) {
   message = 'Why do you know these things?';
 } else {
   message = 'Google if you have to.';
+  quiz1();
 }
 alert(message);
-var question2=prompt('Which country did the salsa dance originate from?');
-var answer2='Cuba';
-var answer3='Puerto Rico';
+}
+quiz1()
+var quiz2 = function() {
+  question2=prompt('Which country did the salsa dance originate from?');
+  answer2='Cuba';
+  answer3='Puerto Rico';
 if (question2==answer2||question2==answer3) {
   message = 'You sure do know some wierd things.';
 } else {
   message = 'I now know you don\'t care about salsa dancing';
+  quiz2()
 }
 alert(message);
-var question3=prompt('What was the name of Elvis Presley\'s identical twin brother was stillborn? Just the first name is enough.')
-var answer4='Jesse'
+}
+quiz2()
+var quiz3 = function() {
+  question3=prompt('What was the name of Elvis Presley\'s identical twin brother was stillborn? Just the first name is enough.');
+  answer4='Jesse';
 if (question3==answer4) {
-  message = 'That\'s a rather morbid fact to know, don\'t you think?'
+  message = 'That\'s a rather morbid fact to know, don\'t you think?';
 } else {
-  message = 'Impress your friends with this fact about a dead baby!....Kinda'
+  message = 'Impress your friends with this fact about a dead baby!....Kinda';
+  quiz3()
 }
 alert(message);
+}
+quiz3()
+}
+trivia()
 </script>
