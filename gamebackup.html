@@ -1,0 +1,43 @@
+<script>
+
+
+var question1, question2, question3, answer1, answer2, answer3, answer4;
+
+// Trivia
+var trivia = function() {
+var quiz1 = function() {
+  question1=prompt('Which capital city has the highest elevation in the world?');
+    answer1='La Paz';
+if (question1==answer1) {
+    alert('Why do you know these things?');
+  } while (question1!==answer1) {
+  alert('Google if you have to');
+  quiz1();
+}
+}
+ var quiz2 = function() {
+   question2=prompt('Which country did the tango dance originate from?');
+   answer2='Argentina';
+ if (question2==answer2) {
+   alert('You sure do know some wierd things.');
+ } while (question2!==answer2) {
+   alert('I now know you don\'t care about tango dancing.');
+   quiz2();
+ }
+ }
+var quiz3 = function() {
+  question3=prompt('What was the name of Elvis Presley\'s identical twin brother who was stillborn? Just the first name is enough.');
+  answer3='Jesse';
+if (question3==answer3) {
+  alert('That\'s a rather morbid fact to know, don\'t you think?');
+} while (question3!==answer3) {
+  alert('Look it up and impress your friends with this fact about a dead baby!....Kinda');
+  quiz3();
+}
+}
+quiz1()
+quiz2()
+quiz3()
+}
+trivia()
+</script>
