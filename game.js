@@ -6,7 +6,7 @@ var Question = function(q, a, cr, ir) {
   this.a = a;
   this.cr = cr;
   this.ir = ir;
-}
+};
 
 var Game = function(questions) {
   this.questions = questions;
@@ -14,18 +14,26 @@ var Game = function(questions) {
   this.run = function(triviaO){
     var guess = prompt(triviaO.q);
     if (guess == triviaO.a) {
-      alert(triviaO.cr);
+    var responseListItem=document.createElement('li');
+    var responseNode=document.createTextNode(triviaO.cr);
+    responseListItem.appendChild(responseNode);
+    document.getElementById('response-list').appendChild(responseListItem);
+
     } else {
-      alert(triviaO.ir);
-    }
-  }
+      var responseListItem=document.createElement('li');
+      var responseNode=document.createTextNode(triviaO.ir);
+      responseListItem.appendChild(responseNode);
+      document.getElementById('response-list').appendChild(responseListItem);
+}
+    };
 
   this.start = function(){
     for (c=0; c<this.questions.length; c++){
       this.run(this.questions[c]);
     }
-  }
+  };
 }
+
 
 
 trivia.push(new Question('Which capital city has the highest elevation in the world?', 'La Paz', 'Why do you know these things?', 'Google if you have to'));
@@ -34,4 +42,3 @@ trivia.push(new Question('What was the name of Elvis Presley\'s identical twin b
 
 var game1 = new Game(trivia);
 game1.start();
-
